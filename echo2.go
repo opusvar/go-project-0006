@@ -11,6 +11,6 @@ func main() {
         s += sep + arg
 		sep = " "
 	}
-
+    fmt.Println(os.Args[0])
 	fmt.Println(s)
 }
