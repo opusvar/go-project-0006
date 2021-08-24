@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	s, sep := "", ""
+	s, sep := "", "\n"
 	i := 0
 	for _, arg := range os.Args[1:] {
 		i++
