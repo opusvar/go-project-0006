@@ -15,7 +15,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintf(w, "Host = %q\n", r.Host)
 	fmt.Fprintf(w, "RemoteAdd = %q\n", r.RemoteAddr)
-	if err:= r.ParseForm(); != nil{
+	if err:= r.ParseForm(); err != nil{
         log.Print(err)
 	}
 	for k, v := range r.Form {
