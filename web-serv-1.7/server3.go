@@ -21,4 +21,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	for k, v := range r.Form {
 		fmt.Fprint(w, "Form[%q] = %q\n", k, v)
 	}
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		lisajous(w)
+	})
 }
